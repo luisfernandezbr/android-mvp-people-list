@@ -5,6 +5,7 @@
 
 ### Project Planning ###
 
+* Understand json data and structure
 * Prototype app screens
 * Define code architecture
 * Choose what libraries to use
