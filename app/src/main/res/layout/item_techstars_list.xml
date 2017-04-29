@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.luisfernandezbr.challenge99.android.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageProfile"
+        android:layout_toEndOf="@id/imageProfile"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="#Steve Jobs"/>
+
+        <TextView
+            android:id="@+id/textBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="#1965-04-01"/>
+
+        <TextView
+            android:id="@+id/textBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="#Steven Paul Jobs was an American businessman, inventor, and industrial designer. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc."/>
+
+    </LinearLayout>
+
+</RelativeLayout>
