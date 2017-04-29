@@ -23,15 +23,16 @@ task clean(type: Delete) {
 }
 
 ext {
-    // Sdk and tools
+    // Project versions
     minSdkVersion = 21
     targetSdkVersion = 25
     compileSdkVersion = 25
     buildToolsVersion = '25.0.2'
 
-    // App dependencies
+    // App dependencies versions
     supportVersion = "25.3.1"
+    gsonVersion = "2.8.0"
 
-    // Test dependencies
+    // Test dependencies versions
     espressoCoreVersion = "2.2.2"
 }
