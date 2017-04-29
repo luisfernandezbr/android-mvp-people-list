@@ -11,7 +11,7 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 import br.com.luisfernandezbr.mvp.bus.BusProvider;
 
-class TechStarsPresenterImpl implements TechStarsPresenter {
+public class TechStarsPresenterImpl implements TechStarsPresenter {
 
     private ActivityLoader activityLoader;
     private TechStarsListView view;
