@@ -16,8 +16,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        presenter = new TechStarsPresenterImpl();
-        presenter.init(this.getActivityLoader());
+        presenter = new TechStarsPresenterImpl(this.getActivityLoader());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        presenter.init();
     }
 
     @Override

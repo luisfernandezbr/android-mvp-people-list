@@ -20,11 +20,15 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
     private TechStarsListView view;
     private TechStarsDataAccess dataAccess;
 
-    @Override
-    public void init(ActivityLoader activityLoader) {
+    public TechStarsPresenterImpl(ActivityLoader activityLoader) {
         this.activityLoader = activityLoader;
-        this.dataAccess = new TechStarsDataAccessImpl();
+        this.dataAccess = new TechStarsDataAccessImpl(activityLoader.loadActivity().getApplicationContext());
         this.view = new TechStarsListViewImpl(activityLoader);
+    }
+
+    @Override
+    public void init() {
+        this.dataAccess.loadList();
     }
 
     @Override
