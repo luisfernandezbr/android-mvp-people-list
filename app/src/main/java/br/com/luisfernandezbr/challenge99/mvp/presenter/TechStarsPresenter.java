@@ -8,4 +8,6 @@ public interface TechStarsPresenter {
     void onViewItemClickedEvent();
 
     void onDataAccessListSuccessEvent();
+
+    void onDataAccessListErrorEvent();
 }
