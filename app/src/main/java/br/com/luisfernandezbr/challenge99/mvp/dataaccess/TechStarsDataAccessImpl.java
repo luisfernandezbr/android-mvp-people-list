@@ -6,7 +6,9 @@ import android.util.Log;
 import java.io.IOException;
 import java.util.List;
 
+import br.com.luisfernandezbr.challenge99.event.DataAccessListSuccessEvent;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
+import br.com.luisfernandezbr.mvp.bus.BusProvider;
 
 public class TechStarsDataAccessImpl implements TechStarsDataAccess {
 
@@ -35,7 +37,7 @@ public class TechStarsDataAccessImpl implements TechStarsDataAccess {
 
     @Override
     public void sendDataAccessListSuccessEvent(List<TechStar> techStarsList) {
-
+        BusProvider.getInstance().post(new DataAccessListSuccessEvent(techStarsList));
     }
 
     @Override
