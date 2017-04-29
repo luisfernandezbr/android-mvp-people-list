@@ -5,6 +5,7 @@ import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccessImpl
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListViewImpl;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
+import br.com.luisfernandezbr.mvp.bus.BusProvider;
 
 class TechStarsPresenterImpl implements TechStarsPresenter {
 
@@ -21,12 +22,12 @@ class TechStarsPresenterImpl implements TechStarsPresenter {
 
     @Override
     public void onStart() {
-
+        BusProvider.getInstance().subscribe(this);
     }
 
     @Override
     public void onStop() {
-
+        BusProvider.getInstance().unsubscribe(this);
     }
 
     @Override
