@@ -4,7 +4,11 @@ package br.com.luisfernandezbr.challenge99.mvp.dataaccess;
 import android.content.Context;
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.R;
@@ -54,6 +58,11 @@ public class TechStarsDataAccessImpl implements TechStarsDataAccess {
     }
 
     private List<TechStar> getFromJson(String json) {
-        return null;
+        Gson gson = new Gson();
+
+        Type type = new TypeToken<List<TechStar>>() {
+        }.getType();
+
+        return gson.fromJson(json, type);
     }
 }
