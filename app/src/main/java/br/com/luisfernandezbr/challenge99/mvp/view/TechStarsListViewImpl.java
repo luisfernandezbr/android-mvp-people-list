@@ -7,7 +7,7 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 import br.com.luisfernandezbr.mvp.BaseView;
 
-class TechStarsListViewImpl extends BaseView implements TechStarsListView {
+public class TechStarsListViewImpl extends BaseView implements TechStarsListView {
 
     public TechStarsListViewImpl(ActivityLoader activityLoader) {
         super(activityLoader);

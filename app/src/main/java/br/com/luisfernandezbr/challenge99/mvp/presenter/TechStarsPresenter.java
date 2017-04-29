@@ -1,7 +1,8 @@
 package br.com.luisfernandezbr.challenge99.mvp.presenter;
 
+import br.com.luisfernandezbr.mvp.BasePresenter;
 
-public interface TechStarsPresenter {
+public interface TechStarsPresenter extends BasePresenter {
 
     void onViewLoadListEvent();
 

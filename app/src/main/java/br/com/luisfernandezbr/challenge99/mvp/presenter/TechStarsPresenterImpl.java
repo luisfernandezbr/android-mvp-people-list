@@ -1,7 +1,27 @@
 package br.com.luisfernandezbr.challenge99.mvp.presenter;
 
+import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccess;
+import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccessImpl;
+import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
+import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListViewImpl;
+import br.com.luisfernandezbr.mvp.ActivityLoader;
 
 class TechStarsPresenterImpl implements TechStarsPresenter {
+
+
+    @Override
+    public void init(ActivityLoader activityLoader) {
+    }
+
+    @Override
+    public void onStart() {
+
+    }
+
+    @Override
+    public void onStop() {
+
+    }
 
     @Override
     public void onViewLoadListEvent() {
