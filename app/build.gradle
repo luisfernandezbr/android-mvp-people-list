@@ -23,6 +23,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile project (":mvp")
+
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
 
