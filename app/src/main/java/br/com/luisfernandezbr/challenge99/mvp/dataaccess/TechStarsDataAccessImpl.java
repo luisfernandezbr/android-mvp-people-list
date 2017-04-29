@@ -2,7 +2,9 @@ package br.com.luisfernandezbr.challenge99.mvp.dataaccess;
 
 
 import android.content.Context;
+import android.util.Log;
 
+import java.io.IOException;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.R;
@@ -11,18 +13,29 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 
 public class TechStarsDataAccessImpl implements TechStarsDataAccess {
 
+    public static final String TAG = "TechStarsDataAccessImpl";
     private Context context;
 
     @Override
     public void loadList() {
-        String jsonFromRaw = AndroidUtils.getJsonFromRaw(context, R.raw.mock_data_list);
+        String jsonFromRaw = null;
 
-        List<TechStar> techStarsList = this.getFromJson(jsonFromRaw);
+        try {
+            jsonFromRaw = AndroidUtils.getJsonFromRaw(context, R.raw.mock_data_list);
 
-        if (this.isValidList(techStarsList)) {
-            this.sendDataAccessListSuccessEvent(techStarsList);
-        } else {
-            this.sendDataAccessListErrorEvent(1000, "Error loading data!");
+            List<TechStar> techStarsList = this.getFromJson(jsonFromRaw);
+
+            if (this.isValidList(techStarsList)) {
+                this.sendDataAccessListSuccessEvent(techStarsList);
+            } else {
+                this.sendDataAccessListErrorEvent(4001, "Error parsing data!");
+            }
+
+        } catch (IOException e) {
+            String errorMessage = "Error loading data!";
+            Log.e(TAG, errorMessage, e);
+
+            this.sendDataAccessListErrorEvent(4000, errorMessage);
         }
     }
 
