@@ -31,16 +31,6 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
         this.dataAccess.loadList();
     }
 
-    @Override
-    public void onStart() {
-        BusProvider.getInstance().subscribe(this);
-    }
-
-    @Override
-    public void onStop() {
-        BusProvider.getInstance().unsubscribe(this);
-    }
-
     @Subscribe
     @Override
     public void onViewLoadListEvent(ViewLoadListEvent event) {
@@ -64,5 +54,15 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
     @Override
     public void onDataAccessListErrorEvent() {
 
+    }
+
+    @Override
+    public void onStart() {
+        BusProvider.getInstance().subscribe(this);
+    }
+
+    @Override
+    public void onStop() {
+        BusProvider.getInstance().unsubscribe(this);
     }
 }
