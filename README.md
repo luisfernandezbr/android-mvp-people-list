@@ -31,8 +31,19 @@ Other inspirations:
 
 
 #### 3) Define code architecture ####
+**M**odel  **V**iew  **P**resenter + Data Access
+
+![architecture_diagram.jpg](https://bitbucket.org/repo/Bggdzxn/images/3527184124-architecture_diagram.jpg)
+
+
 #### 4) Choose what libraries to use ####
-#### 5) Start writing tests for layers and util classes ####
-#### 6) Implement communication between layers ####
-#### 7) Format data ####
-#### 8) Improve UI ####
+* **Simple-RecyclerView** - To simplify list content.
+* **EventBus** - To enable layers communication by events. RXJava alternatively.
+
+
+
+#### 5) Write layer classes and define communication methods ####
+#### 6) Start writing tests for layers and util classes ####
+#### 7) Implement communication between layers ####
+#### 8) Format data ####
+#### 9) Improve UI ####
