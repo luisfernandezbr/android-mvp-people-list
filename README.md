@@ -6,12 +6,10 @@
 ### Project Planning ###
 
 * Understand json data and structure
-
     * Images don't have same sizes
     * One of images has a broken link
     * One entry don't have the "bio" attribute
     * Dates are in ISO8601 format
-
 * Prototype app screens
 * Define code architecture
 * Choose what libraries to use
