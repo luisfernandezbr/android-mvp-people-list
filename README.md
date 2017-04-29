@@ -1,11 +1,6 @@
-# README #
-
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
 * Private repo to develop 99 code challenge
-* Version
 
 ### Project Planning ###
 
