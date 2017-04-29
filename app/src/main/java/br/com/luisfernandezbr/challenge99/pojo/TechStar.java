@@ -4,6 +4,7 @@ package br.com.luisfernandezbr.challenge99.pojo;
 import java.io.Serializable;
 
 import br.com.luisfernandezbr.challenge99.R;
+import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
 
@@ -33,6 +34,7 @@ public class TechStar implements Serializable {
         this.name = name;
     }
 
+    @ImageAdapter(resId = R.id.imageProfile)
     public String getImage() {
         return image;
     }
