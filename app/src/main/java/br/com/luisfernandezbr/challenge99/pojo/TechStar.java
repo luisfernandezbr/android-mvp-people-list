@@ -3,6 +3,11 @@ package br.com.luisfernandezbr.challenge99.pojo;
 
 import java.io.Serializable;
 
+import br.com.luisfernandezbr.challenge99.R;
+import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
+import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
+
+@LayoutAdapter(layoutResId = R.layout.item_techstars_list)
 public class TechStar implements Serializable {
 
     private String id;
@@ -19,6 +24,7 @@ public class TechStar implements Serializable {
         this.id = id;
     }
 
+    @TextAdapter(resId = R.id.textName)
     public String getName() {
         return name;
     }
@@ -35,6 +41,7 @@ public class TechStar implements Serializable {
         this.image = image;
     }
 
+    @TextAdapter(resId = R.id.textBirthday)
     public String getBirthday() {
         return birthday;
     }
@@ -43,6 +50,7 @@ public class TechStar implements Serializable {
         this.birthday = birthday;
     }
 
+    @TextAdapter(resId = R.id.textBio)
     public String getBio() {
         return bio;
     }
