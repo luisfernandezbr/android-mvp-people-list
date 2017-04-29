@@ -1,5 +1,7 @@
 package br.com.luisfernandezbr.challenge99.event;
 
 
-public class ViewLoadListEvent {
+import br.com.luisfernandezbr.mvp.event.BaseEvent;
+
+public class ViewLoadListEvent extends BaseEvent {
 }

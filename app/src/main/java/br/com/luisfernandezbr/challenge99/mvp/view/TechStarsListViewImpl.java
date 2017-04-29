@@ -3,6 +3,7 @@ package br.com.luisfernandezbr.challenge99.mvp.view;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.R;
+import br.com.luisfernandezbr.challenge99.event.ViewLoadListEvent;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 import br.com.luisfernandezbr.mvp.BaseView;
@@ -21,11 +22,12 @@ public class TechStarsListViewImpl extends BaseView implements TechStarsListView
     @Override
     protected void initViews() {
 
+        this.sendViewLoadListEvent();
     }
 
     @Override
     public void sendViewLoadListEvent() {
-
+        BusProvider.getInstance().post(new ViewLoadListEvent());
     }
 
     @Override
