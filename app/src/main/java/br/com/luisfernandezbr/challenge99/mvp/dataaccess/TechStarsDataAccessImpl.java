@@ -1,6 +1,7 @@
 package br.com.luisfernandezbr.challenge99.mvp.dataaccess;
 
 
+import android.content.Context;
 import android.util.Log;
 
 import java.io.IOException;
@@ -15,6 +16,10 @@ public class TechStarsDataAccessImpl implements TechStarsDataAccess {
     private static final String TAG = "TechStarsDataAccessImpl";
 
     private DataService rawDataService;
+
+    public TechStarsDataAccessImpl(Context context) {
+        this.rawDataService = new RawDataServiceImpl(context);
+    }
 
     @Override
     public void loadList() {
