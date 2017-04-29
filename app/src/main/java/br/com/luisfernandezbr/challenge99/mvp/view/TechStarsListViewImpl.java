@@ -1,6 +1,5 @@
 package br.com.luisfernandezbr.challenge99.mvp.view;
 
-
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.R;
