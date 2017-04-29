@@ -50,4 +50,19 @@ public class TechStar implements Serializable {
     public void setBio(String bio) {
         this.bio = bio;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TechStar techStar = (TechStar) o;
+
+        return id.equals(techStar.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
 }
