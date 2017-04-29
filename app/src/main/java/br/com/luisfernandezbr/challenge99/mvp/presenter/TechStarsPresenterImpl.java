@@ -1,9 +1,13 @@
 package br.com.luisfernandezbr.challenge99.mvp.presenter;
 
+import java.util.List;
+
+import br.com.luisfernandezbr.challenge99.event.DataAccessListSuccessEvent;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccess;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccessImpl;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListViewImpl;
+import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 import br.com.luisfernandezbr.mvp.bus.BusProvider;
 
@@ -16,8 +20,8 @@ class TechStarsPresenterImpl implements TechStarsPresenter {
     @Override
     public void init(ActivityLoader activityLoader) {
         this.activityLoader = activityLoader;
-        this.view = new TechStarsListViewImpl(activityLoader);
         this.dataAccess = new TechStarsDataAccessImpl();
+        this.view = new TechStarsListViewImpl(activityLoader);
     }
 
     @Override
@@ -41,8 +45,9 @@ class TechStarsPresenterImpl implements TechStarsPresenter {
     }
 
     @Override
-    public void onDataAccessListSuccessEvent() {
-
+    public void onDataAccessListSuccessEvent(DataAccessListSuccessEvent event) {
+        List<TechStar> techStarsList = event.getTechStarsList();
+        this.view.showLoadListSuccess(techStarsList);
     }
 
     @Override
