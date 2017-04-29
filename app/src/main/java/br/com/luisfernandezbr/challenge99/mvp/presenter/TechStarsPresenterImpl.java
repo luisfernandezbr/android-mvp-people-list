@@ -8,9 +8,13 @@ import br.com.luisfernandezbr.mvp.ActivityLoader;
 
 class TechStarsPresenterImpl implements TechStarsPresenter {
 
+    private ActivityLoader activityLoader;
+    private TechStarsListView view;
 
     @Override
     public void init(ActivityLoader activityLoader) {
+        this.activityLoader = activityLoader;
+        this.view = new TechStarsListViewImpl(activityLoader);
     }
 
     @Override
