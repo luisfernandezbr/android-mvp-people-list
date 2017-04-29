@@ -32,7 +32,7 @@ class TechStarsPresenterImpl implements TechStarsPresenter {
 
     @Override
     public void onViewLoadListEvent() {
-
+        dataAccess.loadList();
     }
 
     @Override
