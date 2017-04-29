@@ -9,4 +9,5 @@ public interface TechStarsDataAccess {
 
     void loadList();
     void sendDataAccessListSuccessEvent(List<TechStar> techStarsList);
+    void sendDataAccessListErrorEvent(int errorCode, String errorMessage);
 }

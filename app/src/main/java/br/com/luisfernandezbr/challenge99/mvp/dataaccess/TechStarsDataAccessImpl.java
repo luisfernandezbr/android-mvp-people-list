@@ -21,11 +21,18 @@ public class TechStarsDataAccessImpl implements TechStarsDataAccess {
 
         if (this.isValidList(techStarsList)) {
             this.sendDataAccessListSuccessEvent(techStarsList);
+        } else {
+            this.sendDataAccessListErrorEvent(1000, "Error loading data!");
         }
     }
 
     @Override
     public void sendDataAccessListSuccessEvent(List<TechStar> techStarsList) {
+
+    }
+
+    @Override
+    public void sendDataAccessListErrorEvent(int errorCode, String errorMessage) {
 
     }
 
