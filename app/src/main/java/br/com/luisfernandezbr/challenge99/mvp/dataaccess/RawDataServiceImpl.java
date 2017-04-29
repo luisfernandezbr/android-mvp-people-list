@@ -19,6 +19,10 @@ public class RawDataServiceImpl implements DataService {
 
     private Context context;
 
+    public RawDataServiceImpl(Context context) {
+        this.context = context;
+    }
+
     @Override
     public List<TechStar> loadList() throws IOException {
         String jsonFromRaw = this.getJsonFromRaw(R.raw.mock_data_list);
