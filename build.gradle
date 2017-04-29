@@ -31,4 +31,7 @@ ext {
 
     // App dependencies
     supportVersion = "25.3.1"
+
+    // Test dependencies
+    espressoCoreVersion = "2.2.2"
 }
