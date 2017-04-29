@@ -1,5 +1,7 @@
 package br.com.luisfernandezbr.challenge99.mvp.presenter;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.event.DataAccessListSuccessEvent;
@@ -34,22 +36,26 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
         BusProvider.getInstance().unsubscribe(this);
     }
 
+    @Subscribe
     @Override
     public void onViewLoadListEvent() {
         dataAccess.loadList();
     }
 
+    @Subscribe
     @Override
     public void onViewItemClickedEvent() {
 
     }
 
+    @Subscribe
     @Override
     public void onDataAccessListSuccessEvent(DataAccessListSuccessEvent event) {
         List<TechStar> techStarsList = event.getTechStarsList();
         this.view.showLoadListSuccess(techStarsList);
     }
 
+    @Subscribe
     @Override
     public void onDataAccessListErrorEvent() {
 
