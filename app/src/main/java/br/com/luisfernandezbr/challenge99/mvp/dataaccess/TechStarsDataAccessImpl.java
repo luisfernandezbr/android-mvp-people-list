@@ -18,6 +18,7 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 public class TechStarsDataAccessImpl implements TechStarsDataAccess {
 
     public static final String TAG = "TechStarsDataAccessImpl";
+
     private Context context;
 
     @Override
@@ -54,7 +55,7 @@ public class TechStarsDataAccessImpl implements TechStarsDataAccess {
     }
 
     private boolean isValidList(List<TechStar> techStarsList) {
-        return false;
+        return techStarsList != null && techStarsList.size() > 0;
     }
 
     private List<TechStar> getFromJson(String json) {
