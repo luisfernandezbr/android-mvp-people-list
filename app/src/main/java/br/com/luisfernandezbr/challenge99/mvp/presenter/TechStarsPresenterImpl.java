@@ -5,7 +5,6 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.event.DataAccessListSuccessEvent;
-import br.com.luisfernandezbr.challenge99.event.ViewLoadListEvent;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccess;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccessImpl;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
@@ -29,12 +28,6 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
     @Override
     public void init() {
         this.dataAccess.loadList();
-    }
-
-    @Subscribe
-    @Override
-    public void onViewLoadListEvent(ViewLoadListEvent event) {
-        dataAccess.loadList();
     }
 
     @Subscribe

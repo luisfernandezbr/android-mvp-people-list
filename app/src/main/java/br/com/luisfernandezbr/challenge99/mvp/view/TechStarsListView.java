@@ -6,7 +6,6 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 
 public interface TechStarsListView {
 
-    void sendViewLoadListEvent();
     void sendViewItemClickedEvent();
 
     void showLoadListSuccess(List<TechStar> techStarsList);
