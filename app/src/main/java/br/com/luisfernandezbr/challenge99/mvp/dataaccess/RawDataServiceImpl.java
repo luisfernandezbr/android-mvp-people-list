@@ -17,18 +17,12 @@ import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 
 public class RawDataServiceImpl implements DataService {
 
-    private static final String TAG = "RawDataServiceImpl";
-
     private Context context;
 
     @Override
     public List<TechStar> loadList() throws IOException {
-        List<TechStar> techStarsList = null;
-
         String jsonFromRaw = this.getJsonFromRaw(R.raw.mock_data_list);
-        techStarsList = this.getFromJson(jsonFromRaw);
-
-        return techStarsList;
+        return this.getFromJson(jsonFromRaw);
     }
 
     private String getJsonFromRaw(@RawRes int resRawId) throws IOException {
