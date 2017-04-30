@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/default_margin"
+    android:paddingTop="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin"
+    android:paddingLeft="@dimen/default_margin"
     tools:context="br.com.luisfernandezbr.challenge99.android.MainActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -51,6 +53,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:lines="2"
+            android:lineSpacingMultiplier="1.4"
             android:ellipsize="end"
             tools:text="#Steven Paul Jobs was an American businessman, inventor, and industrial designer. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc."/>
 

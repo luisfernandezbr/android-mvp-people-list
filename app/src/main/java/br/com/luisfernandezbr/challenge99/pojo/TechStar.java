@@ -25,7 +25,7 @@ public class TechStar implements Serializable {
         this.id = id;
     }
 
-    @TextAdapter(resId = R.id.textName, typeface = "fonts/roboto-medium.ttf")
+    @TextAdapter(resId = R.id.textName, typeface = "fonts/roboto-light.ttf")
     public String getName() {
         return name;
     }
