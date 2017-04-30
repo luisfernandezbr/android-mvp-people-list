@@ -115,7 +115,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                         String typeface = ((TextAdapter) annotation).typeface();
                         //noinspection TryWithIdenticalCatches
                         try {
-                            String textContent = String.valueOf(declaredMethod.invoke(mCurrentItem));
+                            String text = (String) declaredMethod.invoke(mCurrentItem);
+                            String textContent = TextUtils.isEmpty(text) ? "" : text;
                             TextView textView = (TextView) itemView.findViewById(resId);
 
                             if (onPreloadContent == null || !onPreloadContent.onPreLoadContent(textContent, textView)) {
