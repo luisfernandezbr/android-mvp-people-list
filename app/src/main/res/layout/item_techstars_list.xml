@@ -7,7 +7,7 @@
     android:padding="@dimen/default_margin"
     tools:context="br.com.luisfernandezbr.challenge99.android.MainActivity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageProfile"
         android:layout_width="60dp"
         android:layout_height="60dp"
