@@ -4,6 +4,7 @@ package br.com.luisfernandezbr.challenge99.pojo;
 import java.io.Serializable;
 
 import br.com.luisfernandezbr.challenge99.R;
+import br.com.luisfernandezbr.challenge99.android.AppFormattedDate;
 import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
@@ -14,7 +15,7 @@ public class TechStar implements Serializable {
     private String id;
     private String name;
     private String image;
-    private String birthday;
+    private AppFormattedDate birthday;
     private String bio;
 
     public String getId() {
@@ -45,11 +46,7 @@ public class TechStar implements Serializable {
 
     @TextAdapter(resId = R.id.textBirthday, typeface = "fonts/roboto-light.ttf")
     public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+        return birthday.getContent();
     }
 
     @TextAdapter(resId = R.id.textBio, typeface = "fonts/roboto-light.ttf")
