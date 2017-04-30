@@ -25,7 +25,7 @@ public class TechStar implements Serializable {
         this.id = id;
     }
 
-    @TextAdapter(resId = R.id.textName)
+    @TextAdapter(resId = R.id.textName, typeface = "fonts/roboto-medium.ttf")
     public String getName() {
         return name;
     }
@@ -43,7 +43,7 @@ public class TechStar implements Serializable {
         this.image = image;
     }
 
-    @TextAdapter(resId = R.id.textBirthday)
+    @TextAdapter(resId = R.id.textBirthday, typeface = "fonts/roboto-light.ttf")
     public String getBirthday() {
         return birthday;
     }
@@ -52,7 +52,7 @@ public class TechStar implements Serializable {
         this.birthday = birthday;
     }
 
-    @TextAdapter(resId = R.id.textBio)
+    @TextAdapter(resId = R.id.textBio, typeface = "fonts/roboto-light.ttf")
     public String getBio() {
         return bio;
     }
