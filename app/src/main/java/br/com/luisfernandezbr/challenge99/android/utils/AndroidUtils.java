@@ -1,4 +1,4 @@
-package br.com.luisfernandezbr.challenge99.android;
+package br.com.luisfernandezbr.challenge99.android.utils;
 
 
 import android.content.Context;

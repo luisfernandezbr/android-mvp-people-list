@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".android.ListActivity">
+        <activity android:name=".android.activity.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,12 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".android.DetailsActivity"
-            android:parentActivityName=".android.ListActivity"
+            android:name=".android.activity.DetailsActivity"
+            android:parentActivityName=".android.activity.ListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.luisfernandezbr.challenge99.android.ListActivity"/>
+                android:value="br.com.luisfernandezbr.challenge99.android.activity.ListActivity"/>
         </activity>
     </application>
 

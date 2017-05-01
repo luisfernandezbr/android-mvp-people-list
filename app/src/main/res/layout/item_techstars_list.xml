@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/default_margin"
     android:paddingRight="@dimen/default_margin"
     android:paddingLeft="@dimen/default_margin"
-    tools:context="br.com.luisfernandezbr.challenge99.android.ListActivity">
+    tools:context="br.com.luisfernandezbr.challenge99.android.activity.ListActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageProfile"

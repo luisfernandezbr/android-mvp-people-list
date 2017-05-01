@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 import br.com.luisfernandezbr.challenge99.R;
-import br.com.luisfernandezbr.challenge99.android.AndroidUtils;
+import br.com.luisfernandezbr.challenge99.android.utils.AndroidUtils;
 
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.formatter.DateDeserializer;
 import br.com.luisfernandezbr.challenge99.pojo.AppFormattedDate;
