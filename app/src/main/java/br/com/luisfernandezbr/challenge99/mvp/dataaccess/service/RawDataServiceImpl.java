@@ -1,4 +1,4 @@
-package br.com.luisfernandezbr.challenge99.mvp.dataaccess;
+package br.com.luisfernandezbr.challenge99.mvp.dataaccess.service;
 
 import android.content.Context;
 import android.support.annotation.RawRes;
