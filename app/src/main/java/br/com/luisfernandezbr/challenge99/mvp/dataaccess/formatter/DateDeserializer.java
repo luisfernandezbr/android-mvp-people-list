@@ -1,4 +1,4 @@
-package br.com.luisfernandezbr.challenge99.android;
+package br.com.luisfernandezbr.challenge99.mvp.dataaccess.formatter;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -9,6 +9,8 @@ import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import br.com.luisfernandezbr.challenge99.pojo.AppFormattedDate;
 
 
 public class DateDeserializer implements JsonDeserializer<AppFormattedDate> {

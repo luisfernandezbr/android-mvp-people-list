@@ -4,7 +4,6 @@ package br.com.luisfernandezbr.challenge99.pojo;
 import java.io.Serializable;
 
 import br.com.luisfernandezbr.challenge99.R;
-import br.com.luisfernandezbr.challenge99.android.AppFormattedDate;
 import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;

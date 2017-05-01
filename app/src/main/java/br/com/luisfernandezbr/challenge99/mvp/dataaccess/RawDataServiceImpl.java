@@ -15,8 +15,9 @@ import java.util.Set;
 
 import br.com.luisfernandezbr.challenge99.R;
 import br.com.luisfernandezbr.challenge99.android.AndroidUtils;
-import br.com.luisfernandezbr.challenge99.android.DateDeserializer;
-import br.com.luisfernandezbr.challenge99.android.AppFormattedDate;
+
+import br.com.luisfernandezbr.challenge99.mvp.dataaccess.formatter.DateDeserializer;
+import br.com.luisfernandezbr.challenge99.pojo.AppFormattedDate;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 
 public class RawDataServiceImpl implements DataService {
