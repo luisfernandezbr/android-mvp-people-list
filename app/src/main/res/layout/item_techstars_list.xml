@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="@dimen/default_margin"
     android:paddingRight="@dimen/default_margin"
     android:paddingLeft="@dimen/default_margin"
@@ -16,8 +17,9 @@
         android:layout_marginRight="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
         android:scaleType="centerCrop"
-        android:src="@drawable/placeholder"
         android:contentDescription="@string/tech_star_image"
+        app:civ_border_width="1px"
+        app:civ_border_color="#B3B3B3"
         tools:ignore="RtlHardcoded"/>
 
     <LinearLayout

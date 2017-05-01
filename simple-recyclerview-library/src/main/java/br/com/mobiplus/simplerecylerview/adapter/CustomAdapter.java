@@ -9,13 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import br.com.mobiplus.simplerecylerview.R;
 import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
@@ -139,8 +140,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                         //noinspection TryWithIdenticalCatches
                         try {
                             String imageUrl = (String) declaredMethod.invoke(mCurrentItem);
-                            ImageView imageView = (ImageView) itemView.findViewById(resId);
-                            Picasso.with(mContext).load(imageUrl).into(imageView);
+                            final ImageView imageView = (ImageView) itemView.findViewById(resId);
+
+                            Glide.with(mContext)
+                                    .load(imageUrl)
+                                    .placeholder(R.drawable.placeholder)
+                                    .dontAnimate()
+                                    .into(imageView);
+
                         } catch (IllegalAccessException e) {
                             e.printStackTrace();
                         } catch (InvocationTargetException e) {

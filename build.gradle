@@ -33,7 +33,7 @@ ext {
     supportVersion = "25.3.1"
     gsonVersion = "2.8.0"
     eventBusVersion = "3.0.0"
-    picassoVersion = "2.5.2"
+    glideVersion = "3.7.0"
 
     // Test dependencies versions
     espressoCoreVersion = "2.2.2"
