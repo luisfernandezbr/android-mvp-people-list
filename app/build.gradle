@@ -26,7 +26,8 @@ dependencies {
     compile project (":mvp")
     compile project (":simple-recyclerview-library")
 
-    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile "com.android.support:design:$rootProject.ext.supportVersion"
+    compile "de.hdodenhof:circleimageview:$rootProject.ext.circleImageViewVersion"
 
     testCompile 'junit:junit:4.12'
     androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion", {
