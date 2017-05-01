@@ -38,7 +38,7 @@ public class TechStar implements Serializable {
         return birthday.getContent();
     }
 
-    @TextAdapter(resId = R.id.textBio, typeface = "fonts/roboto-light.ttf")
+    @TextAdapter(resId = R.id.textBio, typeface = FONT_ROBOTO_LIGHT)
     public String getBio() {
         return bio;
     }
