@@ -2,8 +2,10 @@ package br.com.luisfernandezbr.challenge99.android.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +20,8 @@ import com.bumptech.glide.Glide;
 import br.com.luisfernandezbr.challenge99.R;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.mobiplus.simplerecylerview.util.TypefaceUtil;
+
+import static br.com.luisfernandezbr.challenge99.FontConstants.FONT_ROBOTO_LIGHT;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -53,8 +57,18 @@ public class DetailsActivity extends AppCompatActivity {
     private void setUpToolbar(String name) {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(name);
+
+        this.configToolbarFont();
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void configToolbarFont() {
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        Typeface typeface = TypefaceUtil.getTypeface(getApplicationContext(), FONT_ROBOTO_LIGHT);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(typeface);
+        collapsingToolbarLayout.setExpandedTitleTypeface(typeface);
     }
 
     private void setUpFabButton() {
@@ -84,6 +98,6 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void applyFont(TextView textBio) {
-        TypefaceUtil.defineTextStyle(getApplicationContext(), textBio, "fonts/roboto-light.ttf");
+        TypefaceUtil.defineTextStyle(getApplicationContext(), textBio, FONT_ROBOTO_LIGHT);
     }
 }
