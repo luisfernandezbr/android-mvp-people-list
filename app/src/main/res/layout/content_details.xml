@@ -10,9 +10,12 @@
     tools:showIn="@layout/activity_details">
 
     <TextView
+        android:id="@+id/textBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text"/>
+        android:lineSpacingMultiplier="1.4"
+        android:textSize="18sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
 
 </android.support.v4.widget.NestedScrollView>
