@@ -12,6 +12,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import com.antonioleiva.materializeyourapp.widgets.SquareImageView;
+import com.bumptech.glide.Glide;
+
 import br.com.luisfernandezbr.challenge99.R;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.mobiplus.simplerecylerview.util.TypefaceUtil;
@@ -36,6 +39,11 @@ public class DetailsActivity extends AppCompatActivity {
         this.setUpToolbar(techStar.getName());
         this.setUpFabButton();
         this.configTextBio(techStar);
+
+        Glide.with(this)
+                .load(techStar.getImage())
+                .crossFade()
+                .into((SquareImageView) findViewById(R.id.imageProfile));
     }
 
     private TechStar loadFrom(Intent intent) {
@@ -54,7 +62,7 @@ public class DetailsActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This is a fake action. :P", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
