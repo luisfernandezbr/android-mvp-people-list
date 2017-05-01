@@ -58,8 +58,18 @@ Done
 
 
 #### 9) Writing tests for layers and util classes ####
+Backlog
 
 
+## Used libraries ##
+* **Support Libraries**
+* **CircleImageView** ([link](https://github.com/hdodenhof/CircleImageView)) To show profile images on ListActivity;
+* **Simple-RecyclerView** ([link](https://github.com/luisfernandezbr/simple-recyclerview)) A library that I develop to prevent RecyclerView boilerplate code 
+    * **Support RecyclerView**
+    * **Glide Image Loader** ([link](https://github.com/bumptech/glide)) To load images magically 
+* **MVPLibrary** - A group of classes used to write my WIP version of MVP 
+    * **EventBus** ([link](https://github.com/greenrobot/EventBus)) To provide event based communication between MVP layers
+    * **Gson** ([link](https://github.com/google/gson)) To provide event based communication between MVP layers
 
 ## Mapped Backlog ##
 * Tests
