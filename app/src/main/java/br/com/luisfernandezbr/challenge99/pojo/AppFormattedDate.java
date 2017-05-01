@@ -1,7 +1,9 @@
 package br.com.luisfernandezbr.challenge99.pojo;
 
 
-public class AppFormattedDate {
+import java.io.Serializable;
+
+public class AppFormattedDate implements Serializable {
 
     private String content;
 
