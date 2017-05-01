@@ -8,6 +8,8 @@ import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
 
+import static br.com.luisfernandezbr.challenge99.FontConstants.FONT_ROBOTO_LIGHT;
+
 @LayoutAdapter(layoutResId = R.layout.item_techstars_list)
 public class TechStar implements Serializable {
 
@@ -25,7 +27,7 @@ public class TechStar implements Serializable {
         this.id = id;
     }
 
-    @TextAdapter(resId = R.id.textName, typeface = "fonts/roboto-light.ttf")
+    @TextAdapter(resId = R.id.textName, typeface = FONT_ROBOTO_LIGHT)
     public String getName() {
         return name;
     }
@@ -43,7 +45,7 @@ public class TechStar implements Serializable {
         this.image = image;
     }
 
-    @TextAdapter(resId = R.id.textBirthday, typeface = "fonts/roboto-light.ttf")
+    @TextAdapter(resId = R.id.textBirthday, typeface = FONT_ROBOTO_LIGHT)
     public String getBirthday() {
         return birthday.getContent();
     }
