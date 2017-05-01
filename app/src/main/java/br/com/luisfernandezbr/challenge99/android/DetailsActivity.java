@@ -3,6 +3,7 @@ package br.com.luisfernandezbr.challenge99.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -34,10 +35,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         this.setUpToolbar(techStar.getName());
         this.setUpFabButton();
+        this.configTextBio(techStar);
+    }
 
-        TextView textBio = (TextView) findViewById(R.id.textBio);
-        TypefaceUtil.defineTextStyle(getApplicationContext(), textBio, "fonts/roboto-light.ttf");
-        textBio.setText(TextUtils.isEmpty(techStar.getBio()) ? getString(R.string.details_description_not_available) : techStar.getBio());
+    private TechStar loadFrom(Intent intent) {
+        return (TechStar) intent.getSerializableExtra(EXTRA_TECH_STAR);
     }
 
     private void setUpToolbar(String name) {
@@ -58,7 +60,22 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
-    private TechStar loadFrom(Intent intent) {
-        return (TechStar) intent.getSerializableExtra(EXTRA_TECH_STAR);
+    private void configTextBio(TechStar techStar) {
+        TextView textBio = (TextView) findViewById(R.id.textBio);
+        textBio.setText(this.getBioDescription(techStar));
+        this.applyFont(textBio);
+    }
+
+    private String getBioDescription(TechStar techStar) {
+        return TextUtils.isEmpty(techStar.getBio()) ? this.getDefaultBioDescription() : techStar.getBio();
+    }
+
+    @NonNull
+    private String getDefaultBioDescription() {
+        return getString(R.string.details_description_not_available);
+    }
+
+    private void applyFont(TextView textBio) {
+        TypefaceUtil.defineTextStyle(getApplicationContext(), textBio, "fonts/roboto-light.ttf");
     }
 }
