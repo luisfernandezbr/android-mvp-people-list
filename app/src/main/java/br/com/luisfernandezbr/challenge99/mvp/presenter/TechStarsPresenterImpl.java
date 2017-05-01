@@ -5,8 +5,10 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.event.DataAccessListSuccessEvent;
+import br.com.luisfernandezbr.challenge99.event.ViewItemClickedEvent;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccess;
 import br.com.luisfernandezbr.challenge99.mvp.dataaccess.TechStarsDataAccessImpl;
+import br.com.luisfernandezbr.challenge99.mvp.navigator.Navigator;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListViewImpl;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
@@ -18,11 +20,13 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
     private ActivityLoader activityLoader;
     private TechStarsListView view;
     private TechStarsDataAccess dataAccess;
+    private Navigator navigator;
 
     public TechStarsPresenterImpl(ActivityLoader activityLoader) {
         this.activityLoader = activityLoader;
         this.dataAccess = new TechStarsDataAccessImpl(activityLoader.loadActivity().getApplicationContext());
         this.view = new TechStarsListViewImpl(activityLoader);
+        this.navigator = new Navigator();
     }
 
     @Override
@@ -32,8 +36,8 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
 
     @Subscribe
     @Override
-    public void onViewItemClickedEvent() {
-
+    public void onViewItemClickedEvent(ViewItemClickedEvent event) {
+        navigator.navigateToDetailScreen(event.getTechStar());
     }
 
     @Subscribe

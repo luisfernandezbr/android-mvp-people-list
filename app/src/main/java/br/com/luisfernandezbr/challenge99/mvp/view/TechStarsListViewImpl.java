@@ -5,9 +5,11 @@ import android.support.annotation.IdRes;
 import java.util.List;
 
 import br.com.luisfernandezbr.challenge99.R;
+import br.com.luisfernandezbr.challenge99.event.ViewItemClickedEvent;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 import br.com.luisfernandezbr.mvp.BaseView;
+import br.com.luisfernandezbr.mvp.bus.BusProvider;
 import br.com.mobiplus.simplerecylerview.SimpleLinearRecyclerView;
 import br.com.mobiplus.simplerecylerview.adapter.OnItemClickListener;
 
@@ -30,8 +32,8 @@ public class TechStarsListViewImpl extends BaseView implements TechStarsListView
     }
 
     @Override
-    public void sendViewItemClickedEvent() {
-
+    public void sendViewItemClickedEvent(TechStar techStar) {
+        BusProvider.getInstance().post(new ViewItemClickedEvent(techStar));
     }
 
     @Override
@@ -39,8 +41,8 @@ public class TechStarsListViewImpl extends BaseView implements TechStarsListView
         recyclerView.setCollection(techStarsList, new OnItemClickListener<TechStar>() {
 
             @Override
-            public void onItemClick(TechStar item, @IdRes int resId) {
-
+            public void onItemClick(TechStar techStar, @IdRes int resId) {
+                TechStarsListViewImpl.this.sendViewItemClickedEvent(techStar);
             }
         });
     }

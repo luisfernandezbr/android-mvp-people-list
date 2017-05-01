@@ -2,8 +2,9 @@ package br.com.luisfernandezbr.challenge99.event;
 
 
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
+import br.com.luisfernandezbr.mvp.event.BaseEvent;
 
-public class ViewItemClickedEvent {
+public class ViewItemClickedEvent extends BaseEvent {
 
     private TechStar techStar;
 
