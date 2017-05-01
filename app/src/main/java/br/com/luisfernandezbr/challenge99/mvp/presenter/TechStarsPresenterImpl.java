@@ -37,7 +37,7 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
     @Subscribe
     @Override
     public void onViewItemClickedEvent(ViewItemClickedEvent event) {
-        navigator.navigateToDetailScreen(event.getTechStar());
+        navigator.navigateToDetailScreen(activityLoader.loadActivity(), event.getTechStar());
     }
 
     @Subscribe
