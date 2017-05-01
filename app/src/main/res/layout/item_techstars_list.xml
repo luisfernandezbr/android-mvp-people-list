@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="@dimen/default_margin"
-    android:paddingRight="@dimen/default_margin"
     android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin"
+    android:paddingTop="@dimen/default_margin"
     tools:context="br.com.luisfernandezbr.challenge99.android.activity.ListActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageProfile"
         android:layout_width="@dimen/circle_image_dimension"
         android:layout_height="@dimen/circle_image_dimension"
-        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
-        android:scaleType="centerCrop"
+        android:layout_marginRight="@dimen/default_margin"
         android:contentDescription="@string/tech_star_image"
-        app:civ_border_width="@dimen/circle_image_border_width"
+        android:scaleType="centerCrop"
         app:civ_border_color="@color/circle_image_border_color"
+        app:civ_border_width="@dimen/circle_image_border_width"
         tools:ignore="RtlHardcoded"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageProfile"
         android:layout_toEndOf="@id/imageProfile"
+        android:layout_toRightOf="@id/imageProfile"
         android:orientation="vertical"
         tools:ignore="RtlHardcoded">
 
@@ -34,8 +34,8 @@
             android:id="@+id/textName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
             android:layout_marginBottom="@dimen/default_margin_small"
+            android:ellipsize="end"
             android:textAppearance="?android:attr/textAppearanceListItem"
             tools:text="#Steve Jobs"/>
 
@@ -44,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_margin_small"
-            android:lines="1"
             android:ellipsize="end"
+            android:lines="1"
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="#1965-04-01"/>
 
@@ -53,10 +53,10 @@
             android:id="@+id/textBio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:lines="2"
-            android:lineSpacingMultiplier="1.4"
             android:ellipsize="end"
+            android:lineSpacingMultiplier="1.4"
+            android:lines="2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="#Steven Paul Jobs was an American businessman, inventor, and industrial designer. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc."/>
 
     </LinearLayout>
