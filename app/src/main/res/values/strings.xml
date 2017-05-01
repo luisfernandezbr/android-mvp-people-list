@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">99-android-challenge</string>
+    <string name="app_name">99 Android Challenge</string>
     <string name="tech_star_image">Tech Star Image</string>
-    <string name="title_activity_details">DetailsActivity</string>
     <string name="details_description_not_available">Description not available</string>
-    <string name="action_settings">Settings</string>
 </resources>
