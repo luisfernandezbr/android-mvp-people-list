@@ -7,10 +7,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
 
 import br.com.luisfernandezbr.challenge99.R;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
+import br.com.mobiplus.simplerecylerview.util.TypefaceUtil;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -27,9 +30,24 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        TechStar techStar = this.loadFrom(getIntent());
 
+        this.setUpToolbar(techStar.getName());
+        this.setUpFabButton();
+
+        TextView textBio = (TextView) findViewById(R.id.textBio);
+        TypefaceUtil.defineTextStyle(getApplicationContext(), textBio, "fonts/roboto-light.ttf");
+        textBio.setText(TextUtils.isEmpty(techStar.getBio()) ? getString(R.string.details_description_not_available) : techStar.getBio());
+    }
+
+    private void setUpToolbar(String name) {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(name);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void setUpFabButton() {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +56,9 @@ public class DetailsActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    private TechStar loadFrom(Intent intent) {
+        return (TechStar) intent.getSerializableExtra(EXTRA_TECH_STAR);
     }
 }
