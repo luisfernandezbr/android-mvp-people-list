@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/default_margin"
     android:paddingTop="@dimen/default_margin"
+    android:background="?android:attr/selectableItemBackground"
     tools:context="br.com.luisfernandezbr.challenge99.android.activity.ListActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
