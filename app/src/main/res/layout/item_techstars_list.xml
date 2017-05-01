@@ -12,14 +12,14 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageProfile"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/circle_image_dimension"
+        android:layout_height="@dimen/circle_image_dimension"
         android:layout_marginRight="@dimen/default_margin"
         android:layout_marginEnd="@dimen/default_margin"
         android:scaleType="centerCrop"
         android:contentDescription="@string/tech_star_image"
-        app:civ_border_width="1px"
-        app:civ_border_color="#B3B3B3"
+        app:civ_border_width="@dimen/circle_image_border_width"
+        app:civ_border_color="@color/circle_image_border_color"
         tools:ignore="RtlHardcoded"/>
 
     <LinearLayout

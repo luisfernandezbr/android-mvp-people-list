@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
-                android:foreground="#99000000"
+                android:foreground="@color/details_banner_transparent_foreground"
                 app:layout_collapseMode="parallax">
 
                 <com.antonioleiva.materializeyourapp.widgets.SquareImageView
