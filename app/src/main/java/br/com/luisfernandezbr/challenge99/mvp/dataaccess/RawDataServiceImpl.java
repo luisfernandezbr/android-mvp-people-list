@@ -1,6 +1,5 @@
 package br.com.luisfernandezbr.challenge99.mvp.dataaccess;
 
-
 import android.content.Context;
 import android.support.annotation.RawRes;
 
@@ -10,7 +9,9 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import br.com.luisfernandezbr.challenge99.R;
 import br.com.luisfernandezbr.challenge99.android.AndroidUtils;
@@ -29,20 +30,19 @@ public class RawDataServiceImpl implements DataService {
     @Override
     public List<TechStar> loadList() throws IOException {
         String jsonFromRaw = this.getJsonFromRaw(R.raw.mock_data_list);
-        return this.getFromJson(jsonFromRaw);
+        return new ArrayList<>(this.getFromJsonUniqueElements(jsonFromRaw));
     }
 
     private String getJsonFromRaw(@RawRes int resRawId) throws IOException {
         return AndroidUtils.getJsonFromRaw(context, resRawId);
     }
 
-    private List<TechStar> getFromJson(String json) {
+    private Set<TechStar> getFromJsonUniqueElements(String json) {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(AppFormattedDate.class, new DateDeserializer())
                 .create();
 
-
-        Type type = new TypeToken<List<TechStar>>() {
+        Type type = new TypeToken<Set<TechStar>>() {
         }.getType();
 
         return gson.fromJson(json, type);
