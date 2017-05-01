@@ -13,9 +13,10 @@ import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListView;
 import br.com.luisfernandezbr.challenge99.mvp.view.TechStarsListViewImpl;
 import br.com.luisfernandezbr.challenge99.pojo.TechStar;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
+import br.com.luisfernandezbr.mvp.BasePresenter;
 import br.com.luisfernandezbr.mvp.bus.BusProvider;
 
-public class TechStarsPresenterImpl implements TechStarsPresenter {
+public class TechStarsPresenterImpl extends BasePresenter implements TechStarsPresenter {
 
     private ActivityLoader activityLoader;
     private TechStarsListView view;
@@ -31,7 +32,11 @@ public class TechStarsPresenterImpl implements TechStarsPresenter {
 
     @Override
     public void init() {
-        this.dataAccess.loadList();
+
+        if (!this.isInitialized()) {
+            this.dataAccess.loadList();
+            this.setInitialized(true);
+        }
     }
 
     @Subscribe
