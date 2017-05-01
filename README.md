@@ -58,3 +58,14 @@ Done
 
 
 #### 9) Writing tests for layers and util classes ####
+
+
+
+## Mapped Backlog ##
+* Tests
+    * I really don't use TDD today, even knowing your value
+    * Even so, the project was developed separating layers in testable pieces;
+* DetailsActivity in MVP architecture
+    * I developed only the ListActivity using a decoupled architecture
+* Error handling
+* Content loading feedback
