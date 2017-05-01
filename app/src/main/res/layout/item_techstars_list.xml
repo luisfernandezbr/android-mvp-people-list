@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/default_margin"
-    android:paddingRight="@dimen/default_margin"
     android:paddingTop="@dimen/default_margin"
     tools:context="br.com.luisfernandezbr.challenge99.android.activity.ListActivity">
 
@@ -34,6 +33,8 @@
             android:id="@+id/textName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin_small"
             android:ellipsize="end"
             android:textAppearance="?android:attr/textAppearanceListItem"
@@ -43,6 +44,8 @@
             android:id="@+id/textBirthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin_small"
             android:ellipsize="end"
             android:lines="1"
@@ -53,12 +56,20 @@
             android:id="@+id/textBio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
             android:ellipsize="end"
             android:lineSpacingMultiplier="1.4"
             android:lines="2"
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="#Steven Paul Jobs was an American businessman, inventor, and industrial designer. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc."/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="#E3E3E3"
+            />
     </LinearLayout>
 
 </RelativeLayout>
