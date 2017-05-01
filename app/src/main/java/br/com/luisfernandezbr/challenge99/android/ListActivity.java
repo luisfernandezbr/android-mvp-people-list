@@ -8,7 +8,7 @@ import br.com.luisfernandezbr.challenge99.mvp.presenter.TechStarsPresenter;
 import br.com.luisfernandezbr.challenge99.mvp.presenter.TechStarsPresenterImpl;
 import br.com.luisfernandezbr.mvp.ActivityLoader;
 
-public class MainActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity {
 
     private TechStarsPresenter presenter;
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         return new ActivityLoader() {
             @Override
             public Activity loadActivity() {
-                return MainActivity.this;
+                return ListActivity.this;
             }
         };
     }
