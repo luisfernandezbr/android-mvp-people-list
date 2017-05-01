@@ -43,7 +43,18 @@ Other inspirations:
 
 
 #### 5) Write layer classes and define communication methods ####
+Done
+
+
 #### 6) Implement communication between layers ####
-#### 7) Writing tests for layers and util classes ####
-#### 8) Format data ####
-#### 9) Improve UI ####
+Done
+
+#### 7) Format data ####
+Done
+
+
+#### 8) Improve UI ####
+Done
+
+
+#### 9) Writing tests for layers and util classes ####
