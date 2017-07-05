@@ -1,6 +1,6 @@
 ## What is this repository for? ##
 
-* Private repo to develop 99 code challenge
+* Repo to develop 99 code challenge
 * Challenge description: https://goo.gl/zKDz0G
 
 ## Project Planning ##
